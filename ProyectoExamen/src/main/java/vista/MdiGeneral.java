@@ -17,6 +17,7 @@ import vista.seguridad.MantenimientoPerfiles;
 import vista.seguridad.MantenimientoAplicacion;
 import vista.seguridad.MantenimientoBitacora;
 import vista.seguridad.AplicacionaUsuarios;
+import vista.seguridad.MantenimientoCine;
 
 
 
@@ -51,6 +52,7 @@ public class MdiGeneral extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         MenuGeneralSeguridad = new javax.swing.JMenu();
@@ -65,12 +67,16 @@ public class MdiGeneral extends javax.swing.JFrame {
         Bitacora = new javax.swing.JMenu();
         ConsultaBitacora = new javax.swing.JMenuItem();
         salirSistema = new javax.swing.JMenuItem();
+        MenuGeneralExamen = new javax.swing.JMenu();
+        MantenimientoCine = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
         jMenuItem2.setText("jMenuItem2");
 
         jMenuItem3.setText("jMenuItem3");
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
@@ -174,6 +180,18 @@ public class MdiGeneral extends javax.swing.JFrame {
         MenuGeneralSeguridad.add(salirSistema);
 
         jMenuBar1.add(MenuGeneralSeguridad);
+
+        MenuGeneralExamen.setText("Examen");
+
+        MantenimientoCine.setText("Mantenimiento Cines");
+        MantenimientoCine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MantenimientoCineActionPerformed(evt);
+            }
+        });
+        MenuGeneralExamen.add(MantenimientoCine);
+
+        jMenuBar1.add(MenuGeneralExamen);
 
         setJMenuBar(jMenuBar1);
 
@@ -330,6 +348,18 @@ for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
                     }
     }//GEN-LAST:event_salirSistemaActionPerformed
 
+    private void MantenimientoCineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MantenimientoCineActionPerformed
+        // TODO add your handling code here:
+        for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
+    frame.dispose(); // Cierra cada ventana abierta
+}
+       MantenimientoCine ventana = new MantenimientoCine();
+       jDesktopPane1.add(ventana);
+       Dimension desktopSize = jDesktopPane1.getSize();
+       Dimension FrameSize = ventana.getSize();
+       ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
+    }//GEN-LAST:event_MantenimientoCineActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -372,11 +402,14 @@ for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
     private javax.swing.JMenu Bitacora;
     private javax.swing.JMenuItem ConsultaBitacora;
     private javax.swing.JMenuItem MantenimientoAplicaciones;
+    private javax.swing.JMenuItem MantenimientoCine;
     private javax.swing.JMenuItem MantenimientoPerfiles;
     private javax.swing.JMenuItem MantenimientoUsuarios;
+    private javax.swing.JMenu MenuGeneralExamen;
     private javax.swing.JMenu MenuGeneralSeguridad;
     private javax.swing.JMenu MenuMantenimientos;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
