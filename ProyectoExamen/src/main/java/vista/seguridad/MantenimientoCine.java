@@ -101,7 +101,7 @@ public class MantenimientoCine extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Mantenimiento Sede");
+        setTitle("Mantenimiento Cine");
         setVisible(true);
 
         btnEliminar.setText("Eliminar");
@@ -126,7 +126,7 @@ public class MantenimientoCine extends javax.swing.JInternalFrame {
         });
 
         label1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        label1.setText("Perfiles");
+        label1.setText("Cines");
 
         btnModificar.setText("Modificar");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
